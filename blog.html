@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Blog by Tegum Clarence Atim: tech news and step-by-step how-tos in ML, MLOps, DevOps and AWS — FastAPI, Docker, CI/CD, RAG on Bedrock, MLflow and more. One post a day.">
+<title>Blog — Tegum Clarence Atim</title>
+<link rel="canonical" href="https://tegum-clarence-atim-portfolio.vercel.app/blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — Tegum Clarence Atim">
+<meta property="og:description" content="Tech news & step-by-step how-tos in ML, MLOps, DevOps and AWS. One post a day.">
+<meta property="og:url" content="https://tegum-clarence-atim-portfolio.vercel.app/blog">
+<meta property="og:image" content="https://tegum-clarence-atim-portfolio.vercel.app/assets/profile.jpg">
+<link rel="icon" href="/assets/profile.jpg">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="/"><img src="/assets/profile.jpg" alt="Tegum Clarence Atim"><span>Tegum Clarence Atim<small>Data Scientist · MLOps · DevOps</small></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">☰</button>
+    <nav class="navlinks" id="navLinks" aria-label="Main">
+      <a href="/">Home</a><a href="/projects">Projects</a><a href="/blog" class="active">Blog</a><a href="/#contact">Contact</a>
+      <button class="btn btn-primary btn-sm" onclick="downloadCV()">↓ Download CV</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero wrap">
+    <div class="label">Blog</div>
+    <h1>Tech news &amp; step-by-step how-tos</h1>
+    <p>Short takes on AI, ML, MLOps, DevOps and AWS news — plus longer how-to guides written step by step, in bullet points, for the questions people actually search. One post a day; up to three on a big trending-news day.</p>
+  </div>
+
+  <section class="wrap">
+    <div class="filters" role="group" aria-label="Filter blog posts" id="blogFilters">
+      <button class="chip-btn active" data-bfilter="all">All</button>
+      <button class="chip-btn" data-bfilter="Tutorials">Tutorials</button>
+      <button class="chip-btn" data-bfilter="Machine Learning">Machine Learning</button>
+      <button class="chip-btn" data-bfilter="MLOps">MLOps</button>
+      <button class="chip-btn" data-bfilter="DevOps">DevOps</button>
+      <button class="chip-btn" data-bfilter="AWS &amp; Cloud">AWS &amp; Cloud</button>
+    </div>
+    <div class="blog-grid" id="blogGrid"></div>
+    <noscript><p style="color:var(--muted)">This blog needs JavaScript to list the posts. The tutorials cover FastAPI + Docker deployment, GitHub Actions CI/CD, RAG on Amazon Bedrock, fraud-model training, the CV matcher build plan, and MLflow monitoring.</p></noscript>
+
+    <div class="card" style="margin-top:20px;max-width:760px">
+      <h3>Blog ↔ LinkedIn: a mix, not a copy</h3>
+      <p><strong>LinkedIn</strong> gets the short version — one post a day, 150–250 words, one image, a question at the end.</p>
+      <p><strong>The blog</strong> gets the long version of the same topic — headings, code, screenshots and links — so it stays findable on Google long after the LinkedIn post fades. Each links to the other.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap" style="padding-top:8px">
+    <div class="contact">
+      <h2>Let’s work together</h2>
+      <p>I am applying for Data Scientist, Machine Learning Engineer, MLOps Engineer, AI Engineer, DevOps Engineer and Site Reliability Engineer roles — remote first, and open to relocating internationally at my own cost. No employer sponsorship required.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:tegumclarence@gmail.com">tegumclarence@gmail.com</a>
+        <button class="btn btn-light" onclick="downloadCV()">↓ Download CV</button>
+        <a class="btn btn-light" href="https://www.linkedin.com/in/tegum-clarence-atim" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-light" href="https://github.com/ClarenceAtim" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <p style="margin:18px 0 0;font-size:13.5px;opacity:.85">Job enquiries: tegumclarence@gmail.com · Agency work: via <a href="https://sidekom.com" target="_blank" rel="noopener">sidekom.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Tegum Clarence Atim · Douala, Cameroon</span>
+    <span><a href="/">Home</a> · <a href="/projects">Projects</a> · <a href="/blog">Blog</a> · <a href="/privacy">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<!-- ARTICLE READER -->
+<div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Blog article">
+  <div class="reader-in">
+    <div class="reader-top">
+      <button class="btn btn-outline btn-sm" onclick="closePost()">← All posts</button>
+      <span class="mono" style="font-size:12px;color:var(--muted)">TEGUM CLARENCE ATIM · BLOG</span>
+    </div>
+    <div id="readerBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Copied</div>
+<script src="/js/main.js"></script>
+<script src="/js/posts.js"></script>
+</body>
+</html>

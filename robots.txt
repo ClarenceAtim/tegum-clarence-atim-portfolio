@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tegum-clarence-atim-portfolio.vercel.app/sitemap.xml
